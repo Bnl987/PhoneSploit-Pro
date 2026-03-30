@@ -1,0 +1,23 @@
+name: Daily Contribution Reminder
+
+on:
+  schedule:
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reminder
+        run: |
+          echo "## Daily Reminder" >> $GITHUB_STEP_SUMMARY
+          echo "Make one real contribution today:" >> $GITHUB_STEP_SUMMARY
+          echo "- code change" >> $GITHUB_STEP_SUMMARY
+          echo "- docs update" >> $GITHUB_STEP_SUMMARY
+          echo "- test improvement" >> $GITHUB_STEP_SUMMARY
+          echo "- review/issue with useful details" >> $GITHUB_STEP_SUMMARY
+          echo "Then push to your repo." >> $GITHUB_STEP_SUMMARY
