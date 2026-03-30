@@ -32,7 +32,7 @@ Use this file for short, real updates about what you built, fixed, learned, or r
 }
 
 $logText = Get-Content 'DAILY_LOG.md' -Raw
-if ($logText -notmatch "(?m)^## $today$") {
+if ($logText -notmatch "(?m)^## $today\r?$") {
     Add-Content 'DAILY_LOG.md' "`n## $today"
 }
 Add-Content 'DAILY_LOG.md' $entry
