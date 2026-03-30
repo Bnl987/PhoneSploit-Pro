@@ -42,4 +42,4 @@ $commitMessage = "docs: daily update $today"
 git commit -m $commitMessage | Out-Host
 
 Write-Host "Committed: $commitMessage"
-Write-Host 'Next: run git push origin main'
+Write-Host 'Next: run git push'
